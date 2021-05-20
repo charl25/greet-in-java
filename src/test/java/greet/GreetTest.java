@@ -10,12 +10,12 @@ public class GreetTest {
     public void shouldReturnHowManyTimesAPersonHasBeenGreeted(){
         Greet greet = new Greet();
 
+        greet.greetPerson("Matt",2);
         greet.greetPerson("Mark",2);
-        greet.greetPerson("Mark",2);
-        greet.greetPerson("Mark",2);
+        greet.greetPerson("Merk",2);
         greet.greetPerson("Mark",2);
 
-        assertEquals(4,greet.greeted("Mark"));
+        assertEquals(2,greet.greeted("Mark"));
     }
 
     @Test
@@ -27,10 +27,39 @@ public class GreetTest {
         greet.greetPerson("Merk",2);
         greet.greetPerson("Mark",2);
 
+        assertEquals(3,greet.counter());
+    }
+
+    @Test
+    public void shouldBeAbleToDeleteAPersonFromTheList(){
+        Greet greet = new Greet();
+
+        greet.greetPerson("Matt",2);
+        greet.greetPerson("Mark",2);
+        greet.greetPerson("Merk",2);
+        greet.greetPerson("Mark",2);
+
+        greet.greeted();
+        greet.clear("Mark");
         greet.greeted();
 
-        assertEquals(3,greet.counter());
+        assertEquals(2, greet.counter());
+    }
 
+    @Test
+    public void shouldBeAbleToClearList(){
+        Greet greet = new Greet();
+
+        greet.greetPerson("Matt",2);
+        greet.greetPerson("Mark",2);
+        greet.greetPerson("Merk",2);
+        greet.greetPerson("Mark",2);
+
+        greet.greeted();
+        greet.clear();
+        greet.greeted();
+
+        assertEquals(0, greet.counter());
     }
 
 }
