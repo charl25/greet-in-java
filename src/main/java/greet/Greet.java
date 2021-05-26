@@ -27,10 +27,9 @@ public class Greet {
                 System.out.println("Sawubona "+ lName);
                 break;
             default:
-                System.out.println("Molo "+ lName);
+                System.out.println("Ndaa "+ lName);
                 break;
         }
-
 
     }
 
