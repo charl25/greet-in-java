@@ -1,4 +1,4 @@
-package greet;
+package net.greet;
 
 import org.junit.jupiter.api.Test;
 
@@ -10,10 +10,10 @@ public class GreetTest {
     public void shouldReturnHowManyTimesAPersonHasBeenGreeted(){
         Greet greet = new Greet();
 
-        greet.greetPerson("Matt",2);
-        greet.greetPerson("Mark",2);
-        greet.greetPerson("Merk",2);
-        greet.greetPerson("Mark",2);
+        greet.greetPerson("Matt","english");
+        greet.greetPerson("Mark","english");
+        greet.greetPerson("Merk","english");
+        greet.greetPerson("Mark","english");
 
         assertEquals(2,greet.greeted("Mark"));
     }
@@ -22,10 +22,10 @@ public class GreetTest {
     public void shouldReturnCountOfHowManyUniqueNamesHaveBeenGreeted(){
         Greet greet = new Greet();
 
-        greet.greetPerson("Matt",2);
-        greet.greetPerson("Mark",2);
-        greet.greetPerson("Merk",2);
-        greet.greetPerson("Mark",2);
+        greet.greetPerson("Matt","english");
+        greet.greetPerson("Mark","english");
+        greet.greetPerson("Merk","english");
+        greet.greetPerson("Mark","english");
 
         assertEquals(3,greet.counter());
     }
@@ -34,10 +34,10 @@ public class GreetTest {
     public void shouldBeAbleToDeleteAPersonFromTheList(){
         Greet greet = new Greet();
 
-        greet.greetPerson("Matt",2);
-        greet.greetPerson("Mark",2);
-        greet.greetPerson("Merk",2);
-        greet.greetPerson("Mark",2);
+        greet.greetPerson("Matt","english");
+        greet.greetPerson("Mark","english");
+        greet.greetPerson("Merk","english");
+        greet.greetPerson("Mark","english");
 
         greet.greeted();
         greet.clear("Mark");
@@ -50,10 +50,10 @@ public class GreetTest {
     public void shouldBeAbleToClearList(){
         Greet greet = new Greet();
 
-        greet.greetPerson("Matt",2);
-        greet.greetPerson("Mark",2);
-        greet.greetPerson("Merk",2);
-        greet.greetPerson("Mark",2);
+        greet.greetPerson("Matt","english");
+        greet.greetPerson("Mark","english");
+        greet.greetPerson("Merk","english");
+        greet.greetPerson("Mark","english");
 
         greet.greeted();
         greet.clear();
