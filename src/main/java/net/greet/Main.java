@@ -9,28 +9,28 @@ public class Main {
         Greet greet = new Greet();
         boolean exit = true;
 
-        start : while(exit){
+        while(exit){
             System.out.println("Enter command or type 'help' for the menu");
             String selection = sc.nextLine();
             String [] input = selection.split(" ");
             switch (input[0]){
                 case "help":
                     greet.help();
-                    continue start;
+                    break;
                 case "greeted":
                     if (input.length > 1) {
                         System.out.println(greet.greeted(input[1]));
                     }else{
                     greet.greeted();
                     }
-                    continue start;
+                    break;
                 case "clear":
                     if(input.length > 1){
                         greet.clear(input[1]);
                     }else{
                     greet.clear();
                     }
-                    continue start;
+                    break;
                 case "exit":
                     exit = false;
                     break;
@@ -44,13 +44,13 @@ public class Main {
                     }else{
                         System.out.println("Invalid command");
                     }
-                    continue start;
+                    break;
                 case "counter":
                     greet.counter();
-                    continue start;
+                    break;
                 default :
                     System.out.println("Invalid command");
-                    continue start;
+                    break;
             }
 
         }
